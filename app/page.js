@@ -1,113 +1,175 @@
+'use client'
+
 import Image from 'next/image'
+import Header from './navbar'
+import Modal from './modal/modal'
+import News from './latest/latestnews'
+import NavegarTopo from './functionsBtn/backToppg'
+import BuyNft from './functionsBtn/mintNft'
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <Header></Header>
+      <aside>
+        <h1>Unlock the Potential of our Ecosystem</h1>
+        <p>At PowerNFT, we are building a powerful and decentralized ecosystem that empowers users to embrace the future of digital assets. Here's why you should be part of it:</p>
+
+        <ul>
+          <li>Access to Exclusive NFT Collections</li>
+          <li>Participate in Staking and Earn Rewards</li>
+          <li>Tokenize Your Digital Assets</li>
+          <li>Community-driven Governance</li>
+          <li>Secure and Transparent Transactions</li>
+        </ul>
+        <button onClick={NavegarTopo}>Connect to purchase NFTs</button>
+        <button hidden onClick={BuyNft}>BUY NFT</button>
+      </aside>
+      <div className="app">
+        <div className="app_img_bx">
+          <img src="Crypto App.png" />
+        </div>
+        <div className="app_content_bx">
+          <h1>Unleash the Potential of Our Future Ecosystem</h1>
+          <p>At PowerNFT, we are working towards building a revolutionary ecosystem that will shape the future of Web3. Here's what you can expect from our upcoming ecosystem:</p>
+          
+
+          <ul>
+            <li>Seamless Integration of NFTs, DeFi, and More</li>
+            <li>Unlock New Revenue Streams with Tokenized Assets</li>
+            <li>Community-Driven Governance and Decision-Making</li>
+            <li>Secure and Scalable Infrastructure</li>
+            <li>Empowering Collaboration and Innovation</li>
+          </ul>
+
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <Modal></Modal>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <div className="road_map" id="road_map">
+        <h1>Stay Engaged and Shape Our Crypto Road Map</h1>
+            <p>At PowerNFT, we believe in the power of community collaboration. Your support and involvement are crucial in driving our roadmap forward. Here's why your engagement matters:</p>
+        <div className="map">
+            <div className="card">
+                <div className="title">
+                    <h6>2023 Q1</h6>
+                    <h4>Initial Launch of PowerNFT</h4>
+                </div>
+                <h5></h5>
+                <h2></h2>
+                </div>
+                
+                <div className="card">
+                    <div className="title">
+                        <h6>2023 Q1/Q2</h6>
+                        <h4>Development and Release of First Exclusive NFTs</h4>
+                    </div>
+                    <h5></h5>
+                    <h2></h2>
+                </div>
+                
+                <div className="card">
+                    <div className="title">
+                        <h6>2023 Q2/Q3</h6>
+                        <h4>Creation of an Active and Engaged Community</h4>
+                    </div>
+                    <h5></h5>
+                    <h2></h2>
+                </div>
+                
+                <div className="card">
+                    <div className="title">
+                        <h6>2023 Q3/Q4</h6>
+                        <h4>Integration with NFT Marketplace Platforms</h4>
+                    </div>
+                    <h5></h5>
+                    <h2></h2>
+                </div>
+                
+                <div className="card">
+                    <div className="title">
+                        <h6>2023 Q4</h6>
+                        <h4>Expansion of NFT Collection with New Artworks and Artists</h4>
+                    </div>
+                    <h5></h5>
+                    <h2></h2>
+                </div>
+                
+                <div className="card">
+                    <div className="title">
+                        <h6>2024 Q1</h6>
+                        <h4>Launch of Coin Cryptocurrency</h4>
+                    </div>
+                    <h5></h5>
+                    <h2></h2>
+                </div>
+                
+                <div className="card">
+                    <div className="title">
+                        <h6>2024 Q1/Q2</h6>
+                        <h4>Launch of NFT Staking</h4>
+                    </div>
+                    <h5></h5>
+                    <h2></h2>
+                </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+                <div className="card">
+                    <div className="title">
+                        <h6>2024 Q1/Q2</h6>
+                        <h4>More after</h4>
+                    </div>
+                    <h5></h5>
+                    <h2></h2>
+                </div>
+                
+                </div>
+    </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+    <div className="follow_road">
+    <ul className="road_fallow">
+        <li>Accelerate Development: Your feedback and ideas guide us in implementing new features and functionalities at a faster pace.</li>
+        <li>Priority Features: By actively participating in our community, you can influence the priority of upcoming roadmap features based on your needs and preferences.</li>
+        <li>Early Access: Community members will have exclusive access to beta releases and new features before they are available to the wider audience.</li>
+        <li>Continuous Improvement: Together, we can identify areas for improvement, address challenges, and ensure a seamless and user-centric experience.</li>
+        <li>Shared Vision: By engaging with our roadmap, you become an integral part of our shared vision for a thriving Web3 ecosystem.</li>
+        <p>Join our community today and help shape the future of PowerNFT. Together, we can achieve remarkable milestones on our crypto roadmap.</p>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+    </ul>
+    </div>
+
+    
+
+    <div className="man">
+        <div className="man_img">
+            <img src="Crypto Man.png" alt="" />
+        </div>
+        <div className="man_content">
+            <h1>Unlock the Power of Web3 and Explore New Possibilities</h1>
+            <p>Welcome to the exciting world of Web3, where blockchain technology is revolutionizing the way we interact and transact online. At PowerNFT, we believe in harnessing the true potential of Web3 to empower individuals and businesses alike. With Web3, you can break free from traditional centralized systems and take control of your digital assets. Say goodbye to intermediaries and hello to a decentralized ecosystem where transparency, security, and privacy are at the forefront.</p>
+            <div className="client_cole">
+                <div className="cont">
+                    <div className="star">
+                        <i className="bi bi-star-fill"></i><i className="bi bi-star-fill"></i><i className="bi bi-star-fill"></i><i className="bi bi-star-fill"></i><i className="bi bi-star-fill"></i><i className="bi bi-star-fill"></i>
+                    </div>
+                    <h4>TopChain</h4>
+                    <p>Web3.Dev</p>
+                </div>
+                <div className="img">
+                   <img src="#" alt="" />  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <News></News>
+
+
+    
+      
+
+
     </main>
   )
 }
